@@ -105,7 +105,7 @@ function getBoolean(str) {
 }
 
 function parseJSONMessage(str) {
-	return str.split(/[\r\n]+/g).map(function(line) {
+	return str.split(/[\r\n]+/g).map(function (line) {
 		const result = JSON.parse(`"${line}"`);
 		if (typeof result !== "string") throw new "Invalid syntax in .env file";
 		return result;
@@ -325,12 +325,13 @@ async function handleMessage(message) {
 			messages[channelID][replyMessageIDs[i]] = context;
 		}
 		messages[channelID].last = context;
+		messages[channelID].amount += 1;
 	} catch (error) {
 		if (typing) {
 			try {
 				// return error
 				await message.reply({ content: "Error, please check the console" });
-			} catch (ignored) {}
+			} catch (ignored) { }
 		}
 		throw error;
 	}
