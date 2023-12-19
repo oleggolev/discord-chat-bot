@@ -1,13 +1,17 @@
 <div align="center">
-    <h1><a href="#"></a>Discord AI Bot</h1>
+    <h1><a href="#"></a>Discord Chat Bot</h1>
     <h3 align="center"><a href="#"></a>Discord bot to interact with <a href="https://github.com/jmorganca/ollama">Ollama</a> as a chatbot</h3>
-    <h3><a href="#"></a><img alt="Stars" src="https://img.shields.io/github/stars/mekb-turtle/discord-ai-bot?display_name=tag&style=for-the-badge" /></h3>
-    <h3><a href="#"></a><img alt="Discord chat with the bot" src="assets/screenshot.png" /></h3>
+    <h3><a href="#"></a><img alt="Discord chat with the bot" src="assets/pepe.png" /></h3>
 </div>
 
 ### Overview
 
 This bot runs as a service that relies on `ollama serve` running somewhere. If that is not feasible (depending on the deployment environment), it is also possible to simply call the desired model through a CLI and forward the CLI output directly as shown [here](https://medium.com/@verma.chandan/mastering-mixtral-8x7b-your-guide-to-ai-magic-with-flask-2c5da9de5d3f).
+
+To change a system prompt and refresh its model configuration, use `ollama create` as in this example:
+```bash
+ollama create eisgruber -f ./prompts/dolphin2.2-eisgruber
+```
 
 ### Set-up instructions
 1. Install [Node.js](https://nodejs.org) (if you have a package manager, use that instead to install this)
