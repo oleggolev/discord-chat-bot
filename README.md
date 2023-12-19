@@ -5,6 +5,10 @@
     <h3><a href="#"></a><img alt="Discord chat with the bot" src="assets/screenshot.png" /></h3>
 </div>
 
+### Overview
+
+This bot runs as a service that relies on `ollama serve` running somewhere. If that is not feasible (depending on the deployment environment), it is also possible to simply call the desired model through a CLI and forward the CLI output directly as shown [here](https://medium.com/@verma.chandan/mastering-mixtral-8x7b-your-guide-to-ai-magic-with-flask-2c5da9de5d3f).
+
 ### Set-up instructions
 1. Install [Node.js](https://nodejs.org) (if you have a package manager, use that instead to install this)
     - Make sure to install at least v14 of Node.js
